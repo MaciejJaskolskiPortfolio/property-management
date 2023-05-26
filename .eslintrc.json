@@ -1,0 +1,72 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "schd",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "schd",
+            "style": "kebab-case"
+          }
+        ],
+        "no-console": "error",
+        "default-case": "error",
+        "object-curly-spacing": [2, "always"],
+        "semi": "error",
+        "prefer-const": "error",
+        "quotes": ["error", "single"],
+        "no-unused-vars": "error",
+        "@typescript-eslint/explicit-function-return-type": "error",
+        "@typescript-eslint/member-ordering": "error",
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "@typescript-eslint/typedef": [
+          "error",
+          {
+            "parameter":  true,
+            "variableDeclarationIgnoreFunction":  true,
+            "variableDeclaration":  true
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "plugin:@ngrx/recommended"
+      ]
+    }
+  ]
+}
