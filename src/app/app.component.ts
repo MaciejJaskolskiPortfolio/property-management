@@ -1,11 +1,11 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { MainRoutes, NavLink } from "../core/modes";
+import { MainRoutes, NavLink } from '../core/modes';
 
 @Component({
   selector: 'pm-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   mobileQuery: MediaQueryList;
@@ -13,9 +13,8 @@ export class AppComponent {
   private _mobileQueryListener: () => void;
 
   fillerNav: NavLink[] = [
-    { label: 'Add', route: '' },
-    { label: 'My Tasks', route: '' },
-    { label: 'My Schedule', route: '' },
+    { label: 'Schedule', route: MainRoutes.SCHEDULE },
+    { label: 'Properties', route: MainRoutes.PROPERTIES },
     { label: 'Agents', route: MainRoutes.AGENTS },
     { label: 'Profile', route: MainRoutes.PROFILE },
   ];

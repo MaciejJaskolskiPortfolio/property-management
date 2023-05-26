@@ -11,6 +11,30 @@ const routes: Routes = [
       breadcrumb: 'Agents',
     },
   },
+  {
+    path: MainRoutes.PROPERTIES,
+    loadChildren: () =>
+      import('./properties/properties.module').then((m) => m.PropertiesModule),
+    data: {
+      breadcrumb: 'Properties',
+    },
+  },
+  {
+    path: MainRoutes.PROFILE,
+    loadChildren: () =>
+      import('./profile/profile.module').then((m) => m.ProfileModule),
+    data: {
+      breadcrumb: 'My Profile',
+    },
+  },
+  {
+    path: MainRoutes.SCHEDULE,
+    loadChildren: () =>
+      import('./schedule/schedule.module').then((m) => m.ScheduleModule),
+    data: {
+      breadcrumb: 'Schedule',
+    },
+  },
 ];
 
 @NgModule({
